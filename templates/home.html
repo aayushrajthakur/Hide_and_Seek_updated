@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Steganography App{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-4">Welcome, {{ username }}!</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body p-4">
+                                <h5 class="card-title">Encode Message</h5>
+                                <p class="card-text">Hide your secret message within an image.</p>
+                                <a href="{{ url_for('encode') }}" class="btn btn-primary">Encode Message</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow">
+                            <div class="card-body p-4">
+                                <h5 class="card-title">Decode Message</h5>
+                                <p class="card-text">Extract hidden messages from encoded images.</p>
+                                <a href="{{ url_for('decode') }}" class="btn btn-primary">Decode Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
